@@ -42,3 +42,83 @@ body {
     width: 100%;
   }
 }
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  background-color: #decbb7ff;
+  text-align: center;
+}
+
+body {
+  cursor: url('photos/cat-cursor.png'), default;
+  /* cursor image must be less than 128x128 */
+}
+
+/* Colour pallete:
+--lavender-mist: #f7f0f5ff;
+--pale-oak: #decbb7ff;
+--grey-olive: #8f857dff;
+--stone-brown: #5c5552ff;
+--deep-mocha: #433633ff; */
+
+/* header?! */
+#header {
+  margin-top: 70px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid black;
+  white-space: nowrap;
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 5s steps(40, end), /* Typing animation */
+    blink-caret .75s step-end infinite; /* Blinking cursor animation */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+
+/* whoami section */
+#whoami {
+  color: #f7f0f5ff;
+  height: fit-content;
+  max-width: 750px;
+  background-color: #8f857dff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+  text-align: left;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px;
+}
+
+.title {
+  color: #d1daff;
+}
+
+.horizontal-text-container {
+  color: #f7f0f5ff;
+  height: fit-content;
+  max-width: 750px;
+  background-color: #6f5e53ff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+  text-align: left;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 40px;
+}
+

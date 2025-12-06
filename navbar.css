@@ -1,0 +1,110 @@
+/* NAVBAR iihfiejf */
+.navbar-container *,
+::before,
+.navbar-container *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  width: 100vw;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  height: 80px;
+  width: 750px;
+  border-radius: 10px;
+  background: #5c5552ff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+}
+
+.nav-list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 10px;
+  border: 2px solid #f7f0f5ff;
+  overflow: hidden;
+}
+
+.item a {
+  font-size: 16px;
+  text-transform: lowercase;
+  color: #f7f0f5ff;
+  z-index: 10;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.item:hover a {
+  color: #433633ff;
+}
+
+.item:before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  transform: skew(30deg);
+  background: #f7f0f5ff;
+  transition: width 400ms ease;
+}
+/* whoami */
+.item:hover:before {
+  width: 120%;
+}
+/* experiences */
+.item:nth-child(2):before {
+  width: 180px;
+  height: 0%;
+  bottom: 0px;
+  transition: height 400ms ease;
+}
+
+.item:nth-child(2):hover:before {
+  height: 100%;
+}
+/* certifications */
+.item:nth-child(3):before { 
+    /* center extend outwards */
+  transform: skew(0deg);
+}
+/* achievements */
+.item:nth-child(4):before {
+  width: 180px;
+  height: 0%;
+  top: 0px;
+  transition: height 400ms ease;
+}
+
+.item:nth-child(4):hover:before {
+  height: 100%;
+}
+/* showcase! */
+.item:nth-child(5):before {
+  transform: skew(-20deg);
+}
