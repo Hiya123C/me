@@ -3,7 +3,11 @@ body, html {
   font-family: "Inconsolata", sans-serif;
   background-color: #decbb7ff;
   text-align: center;
-  
+}
+
+body {
+  cursor: url('photos/cat-cursor.png'), default;
+  /* cursor image must be less than 128x128 */
 }
 
 /* Colour pallete:
@@ -55,6 +59,10 @@ body, html {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 10px;
+}
+
+.title {
+  color: #d1daff;
 }
 
 .horizontal-text-container {
