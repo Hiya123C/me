@@ -4,27 +4,25 @@ let isDragging = false;
 let startX = 0;
 let currentCard = null;
 
-const cardColors = [
-  "#b2df8a",
-  "#a6cee1",
-  "#1f78b4",
-  "#33a02b",
-  "#fc9a99",
-  "#e21a1c",
-  "#fdbe70",
-  "#ff7f00",
-  "#cab2d6",
-  "#6a3d9a",
+// arranged from biggest to smallest size
+const imageSources = [
+  "photos/photo6.jpg",
+  "photos/photo3.jpg",
+  "photos/photo1.jpg",
+  "photos/photo2.jpg",
+  "photos/photo4.jpg",
+  "photos/photo5.jpg",
 ];
 
-for (let i = 10; i >= 1; i--) {
+for (let i = 6; i >= 1; i--) {
   const card = document.createElement("div");
   card.className = "card";
-  card.style.backgroundColor = cardColors[i - 1];
-  cardContent = document.createElement("div");
-  cardContent.className = "card-content";
-  cardContent.textContent = i;
-  card.appendChild(cardContent);
+  // card.style.backgroundColor = cardColors[i - 1];
+  const img = document.createElement("img");
+  img.src = imageSources[i - 1];
+  img.className = "card-image";
+
+  card.appendChild(img);
   container.appendChild(card);
 }
 function getTopCard() {
@@ -59,9 +57,8 @@ container.addEventListener("touchstart", (e) => {
 container.addEventListener("touchmove", (e) => {
   if (!isDragging || !currentCard) return;
   const deltaX = e.touches[0].clientX - startX;
-  currentCard.style.transform = `translateX(${deltaX}px) rotate(${
-    deltaX / 10
-  }deg)`;
+  currentCard.style.transform = `translateX(${deltaX}px) rotate(${deltaX / 10}deg)`;
+
 });
 container.addEventListener("touchend", (e) => {
   if (!isDragging || !currentCard) return;
