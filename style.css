@@ -1,7 +1,12 @@
 body, html {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
-  background-color: #decbb7ff;
+  background-image: url('photos/Background-texture.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  /* background-color: #decbb7ff; */
   text-align: center;
 }
 
@@ -20,9 +25,13 @@ body {
 /* header?! */
 #header {
   margin-top: 70px;
-  max-width: fit-content;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #8f857dff;
+  text-align: center;
+  color: #f7f0f5ff;
+  border-radius: 10px;
 }
 
 .typewriter {
