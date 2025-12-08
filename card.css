@@ -13,7 +13,30 @@
   height: 400px; */
 }
 
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .card {
+  max-width: 90vw;   /* shrink-to-fit within viewport */
+  max-height: 80vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  user-select: none;
+  transition: transform 0.3s, opacity 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 4px 12px rgba(0,0,0,0.15);
+}
+
+/* .card {
   position: absolute;
   border-radius: 10px;
   overflow: hidden;
@@ -23,10 +46,10 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-}
+  align-items: center;
+} */
 
 .card:not(:last-child) {
   top: 5px;
