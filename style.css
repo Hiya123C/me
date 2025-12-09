@@ -28,10 +28,10 @@ body {
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #8f857dff;
+  background-color: #6f5e53ff;
   text-align: center;
-  color: #f7f0f5ff;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .typewriter {

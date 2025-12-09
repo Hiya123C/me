@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.cert-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cert-column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+.cert-container {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #5c5552ff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.cert-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  .cert-column {
+    width: 100%;
+  }
+}
