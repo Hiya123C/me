@@ -9,6 +9,7 @@
 
 .card-container {
   position: relative;
+  text-align: center;
   /* width: 300px;
   height: 400px; */
 }
@@ -23,7 +24,7 @@
 }
 
 .card {
-  max-width: 90vw;   /* shrink-to-fit within viewport */
+  max-width: 90vw;
   max-height: 80vh;
   position: absolute;
   left: 50%;
@@ -35,21 +36,6 @@
   border-radius: 10px;
   box-shadow: 4px 12px rgba(0,0,0,0.15);
 }
-
-/* .card {
-  position: absolute;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 4px 12px rgba(0,0,0,0.15);
-  user-select: none;
-  transition: transform 0.3s, opacity 0.3s ease;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .card:not(:last-child) {
   top: 5px;
@@ -62,4 +48,14 @@
   max-width: 90vw;
   max-height: 80vh;
   object-fit: contain;
+}
+
+.card-caption {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #c2c2c2;
+  text-align: center;
+  width: 100%;
+  background: rgba(255,255,255,0.85);
+  box-sizing: border-box;
 }

@@ -14,6 +14,15 @@ const imageSources = [
   "photos/photo5.jpg",
 ];
 
+const captionText = [
+  "",
+  "photo3-caption",
+  "photo1-caption",
+  "photo2-caption",
+  "photo4-caption",
+  "photo5-caption",
+];
+
 for (let i = 6; i >= 1; i--) {
   const card = document.createElement("div");
   card.className = "card";
@@ -22,7 +31,12 @@ for (let i = 6; i >= 1; i--) {
   img.src = imageSources[i - 1];
   img.className = "card-image";
 
+  const caption = document.createElement("p");
+  caption.textContent = captionText [i - 1];
+  caption.className = "card-caption";
+
   card.appendChild(img);
+  card.appendChild(caption);
   container.appendChild(card);
 }
 function getTopCard() {
