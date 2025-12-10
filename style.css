@@ -1,12 +1,12 @@
 body, html {
   height: 100%;
   font-family: "Inconsolata", sans-serif;
-  background-image: url('photos/Background-texture.jpg');
+  /* background-image: url('photos/Background-texture.jpg');
   background-size: cover;
   background-position: center; 
   background-repeat: no-repeat;
-  background-attachment: fixed; 
-  /* background-color: #decbb7ff; */
+  background-attachment: fixed;  */
+  background-color: #decbb7ff;
   text-align: center;
 }
 
