@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="music-disc.css">
+    <link rel="stylesheet" href="song.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 
@@ -38,12 +39,30 @@
             <h2 class="title">Songs 🎧</h2>
             <p class="caption">creds: myself <s>and my hours of hardwork</s></p>
             <!-- add a music player disc to bottom right?!! -->
-            <div class="song-container">
-                <img>
-                <h5>Sky</h5>
-                <p>a catchy pop song</p>
-                <!-- slider -->
-                <!-- play and stopbutton -->
+
+            <div class="song-card">
+                <img class="song-cover" src="placeholder" alt="Song cover">
+                <div class="music-player">    
+                    <div class="title-row">
+                        <h5 class="song-title">Sky</h5>
+                        <span class="dot"></span>
+                        <p class="song-desc">a catchy pop song!</p>
+                    </div>
+                    
+                    <audio id="audio-sky" src="music/sky.mp3"></audio>
+                    <input type="range" class="seek-slider" min="0" max="100" value="0">
+
+                    <div class="audio-controls">
+                        <div class="buttons">
+                            <button class="play-btn">
+                                <img class="play-btn" src="photos/Play-button.png">
+                            </button>
+                            <button class="pause-btn">
+                                <img class="pause-btn" src="photos/Pause-button.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -65,5 +84,6 @@
 
     <script src="script.js"></script>
     <script src="music-disc.js"></script>
+    <script src="song.js"></script>
 </body>
 </html>
