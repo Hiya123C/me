@@ -28,10 +28,6 @@
     z-index: 10;
 }
 
-/* .disc:first-child {
-    opacity: 1;
-} */
-
 .hidden {
     visibility: hidden;
 }

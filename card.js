@@ -33,7 +33,7 @@ function createCards() {
   for (let i = 9; i >= 1; i--) {
     const card = document.createElement("div");
     card.className = "card";
-    // card.style.backgroundColor = cardColors[i - 1];
+    
     const img = document.createElement("img");
     img.src = imageSources[i - 1];
     img.className = "card-image";
