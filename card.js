@@ -45,6 +45,15 @@ function createCards() {
   }
 }
 
+function resetCards() {
+  createCards();
+
+  document.querySelector(".centre-grp").style.opacity = 0;
+  document.querySelector(".closing").style.opacity = 0;
+  document.getElementById("reset-button").style.display = "none";
+  // alert("button is working");
+}
+
 createCards();
 
 function getTopCard() {
@@ -114,11 +123,3 @@ function handleSwipe(deltaX) {
   }
   isDragging = false;
 }
-
-// reset button
-document.getElementById("reset-button").addEventListener("click", () => {
-  createCards();
-  document.getElementById("reset-button").style.display = "none";
-  document.querySelector(".centre-grp").style.opacity = 0;
-  document.querySelector(".closing").style.opacity = 0;
-})
