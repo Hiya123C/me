@@ -5,6 +5,7 @@
   align-items: center;
   height: 80vh;
   overflow: hidden;
+  position: relative;
 }
 
 .card-container {
@@ -16,6 +17,7 @@
   text-align: center;
   width: 670px;
   height: 600px;
+  z-index: 10;
 }
 
 .centre-grp {
@@ -23,6 +25,10 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
 .closing {
@@ -31,6 +37,8 @@
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
 }
 
 .card-image {
@@ -40,6 +48,8 @@
   height: auto;
   object-fit: contain;
   display: block;
+  max-width: 90vw;
+  max-height: 80vh;
 }
 
 .card {
@@ -60,16 +70,17 @@
   top: 5px;
 }
 
-.card-image {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 90vw;
-  max-height: 80vh;
-  object-fit: contain;
+#reset-button {
+  all: unset;
+  cursor: pointer;
+  font-size: 0.5rem;
+  transition: 0.2s;
+  width: 10px;
+  height: 10px;
 }
 
-.card-caption {
+/* lets kill caption for now... */
+/* .card-caption {
   padding: 10px 15px;
   font-size: 16px;
   color: #c2c2c2;
@@ -77,4 +88,4 @@
   width: 100%;
   background: rgba(255,255,255,0.85);
   box-sizing: border-box;
-}
+} */ 

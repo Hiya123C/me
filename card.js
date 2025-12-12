@@ -14,8 +14,9 @@ const imageSources = [
   "photos/photo5.jpg",
 ];
 
+// lets leave this unused...
 const captionText = [
-  "",
+  "photo6-caption",
   "photo3-caption",
   "photo1-caption",
   "photo2-caption",
@@ -23,25 +24,33 @@ const captionText = [
   "photo5-caption",
 ];
 
-for (let i = 6; i >= 1; i--) {
-  const card = document.createElement("div");
-  card.className = "card";
-  // card.style.backgroundColor = cardColors[i - 1];
-  const img = document.createElement("img");
-  img.src = imageSources[i - 1];
-  img.className = "card-image";
+function createCards() {
+  container.innerHTML = ""; //clear prev old cards
 
-  const caption = document.createElement("p");
-  caption.textContent = captionText [i - 1];
-  caption.className = "card-caption";
+  for (let i = 6; i >= 1; i--) {
+    const card = document.createElement("div");
+    card.className = "card";
+    // card.style.backgroundColor = cardColors[i - 1];
+    const img = document.createElement("img");
+    img.src = imageSources[i - 1];
+    img.className = "card-image";
 
-  card.appendChild(img);
-  card.appendChild(caption);
-  container.appendChild(card);
+    // const caption = document.createElement("p");
+    // caption.textContent = captionText [i - 1];
+    // caption.className = "card-caption";
+
+    card.appendChild(img);
+    // card.appendChild(caption);
+    container.appendChild(card);
+  }
 }
+
+createCards();
+
 function getTopCard() {
   return container.querySelector(".card:last-child");
 }
+// mouse events
 container.addEventListener("mousedown", (e) => {
   currentCard = getTopCard();
   if (!currentCard) return;
@@ -61,6 +70,7 @@ container.addEventListener("mouseup", (e) => {
   const deltaX = e.clientX - startX;
   handleSwipe(deltaX);
 });
+// touch events
 container.addEventListener("touchstart", (e) => {
   currentCard = getTopCard();
   if (!currentCard) return;
@@ -80,6 +90,7 @@ container.addEventListener("touchend", (e) => {
   handleSwipe(deltaX);
 });
 
+// swipe
 function handleSwipe(deltaX) {
   const sensitivity = 50;
   if (Math.abs(deltaX) > sensitivity) {
@@ -91,10 +102,25 @@ function handleSwipe(deltaX) {
     setTimeout(() => {
       currentCard.remove();
       currentCard = null;
+
+      if (container.children.length === 0) {
+        document.getElementById("reset-button").style.display = "block";
+        document.querySelector(".centre-grp").style.opacity = 1;
+        document.querySelector(".closing").style.opacity = 1;
+      }
     }, 400);
+    
   } else {
     currentCard.style.transition = "transform 0.3s ease";
     currentCard.style.transform = "translateX(0) rotate(0)";
   }
   isDragging = false;
 }
+
+// reset button
+document.getElementById("reset-button").addEventListener("click", () => {
+  createCards();
+  document.getElementById("reset-button").style.display = "none";
+  document.querySelector(".centre-grp").style.opacity = 0;
+  document.querySelector(".closing").style.opacity = 0;
+})
