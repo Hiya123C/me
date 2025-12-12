@@ -61,9 +61,7 @@ container.addEventListener("mousedown", (e) => {
 container.addEventListener("mousemove", (e) => {
   if (!isDragging || !currentCard) return;
   const deltaX = e.clientX - startX;
-  currentCard.style.transform = `translateX{deltaX}px) rotate(${
-    deltaX / 10
-  }deg)`;
+  currentCard.style.transform = `translateX{deltaX}px) rotate(${deltaX / 10}deg)`;
 });
 container.addEventListener("mouseup", (e) => {
   if (!isDragging || !currentCard) return;
