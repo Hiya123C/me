@@ -12,6 +12,9 @@ const imageSources = [
   "photos/photo2.jpg",
   "photos/photo4.jpg",
   "photos/photo5.jpg",
+  "photos/photo7.jpeg",
+  "photos/photo8.jpeg",
+  "photos/photo9.jpeg",
 ];
 
 // lets leave this unused...
@@ -27,7 +30,7 @@ const captionText = [
 function createCards() {
   container.innerHTML = ""; //clear prev old cards
 
-  for (let i = 6; i >= 1; i--) {
+  for (let i = 9; i >= 1; i--) {
     const card = document.createElement("div");
     card.className = "card";
     // card.style.backgroundColor = cardColors[i - 1];
