@@ -1,65 +1,69 @@
 /* NAVBAR iihfiejf */
 .navbar-container *,
-::before,
+.navbar-container *::before,
 .navbar-container *::after {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
 .navbar-container {
-  width: 100vw;
-  min-height: 20vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  padding: 1rem;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  height: 80px;
+  min-height: 80px;
   max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: 50px;
+  margin-right: 50px; */
   border-radius: 10px;
   background: #5c5552ff;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px; */
 }
 
 .nav-list {
-  width: 100%;
   list-style: none;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 10px 20px;
 }
 
 .item {
   position: relative;
-  width: 200px;
-  height: 40px;
+  min-width: 140px;
+  width: auto;
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   user-select: none;
-  cursor: url('photos/Open-rose-cursor.png'), default; /* hopefully the cursor works... */
-  margin: 0 10px;
-  padding: 10px;
+  /* cursor: url('photos/Open-rose-cursor.png'), default; */
+  margin: 10px;
   border: 2px solid #f7f0f5ff;
   overflow: hidden;
 }
 
 .item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;      /* THIS is the spacing you want */
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   text-transform: lowercase;
   color: #f7f0f5ff;
   z-index: 10;
   text-decoration: none;
-  transition: color 200ms ease;
 }
 
 .item:hover a {
@@ -109,4 +113,16 @@ nav {
 /* showcase! */
 .item:nth-child(5):before {
   transform: skew(-20deg);
+}
+
+/* smaller screens */
+@media (max-width: 600px) {
+  .item {
+    margin: 6px;
+    padding: 8px;
+  }
+
+  .item a {
+    font-size: 14px;
+  }
 }

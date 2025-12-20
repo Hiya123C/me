@@ -10,10 +10,10 @@ body, html {
   text-align: center;
 }
 
-body {
-  /* cursor: url('photos/Side-rose-cursor.png'), default; */
-  /* cursor image must be less than 128x128 */
-}
+/* body {
+  cursor: url('photos/Side-rose-cursor.png'), default; 
+   cursor image must be less than 128x128
+} */
 
 /* Colour pallete:
 --lavender-mist: #f7f0f5ff;
@@ -35,26 +35,28 @@ body {
 }
 
 .typewriter {
+  display: inline-block;
   overflow: hidden;
   border-right: .15em solid #d1daff;
   white-space: nowrap;
-  margin: 0 auto; 
+  max-width: 0;
   letter-spacing: .15em; 
   animation: 
-    typing 5s steps(40, end), /* Typing animation */
+    typing 5s steps(40, end) forwards, /* Typing animation */
     blink-caret .75s step-end 5s; /* Blinking cursor animation */
   animation-fill-mode: forwards;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { max-width: 0 }
+  to { max-width: 100% }
 }
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #d1daff; }
 }
+
 
 .outside-border {
   color: #f7f0f5ff;
@@ -74,7 +76,7 @@ body {
   height: fit-content;
   max-width: 750px;
   background-color: #6f5e53ff;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px; */
   text-align: left;
   border-radius: 10px;
   margin-left: auto;
@@ -118,4 +120,14 @@ body {
 }
 
 
+/* on smaller screens */
+@media (max-width: 600px) {
+  #header {
+    margin-top: 20px;
+    padding: 1rem;
+  }
 
+  h1 {
+    font-size: 1.4rem;
+  }
+}

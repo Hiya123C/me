@@ -19,7 +19,8 @@
   padding: 20px;
   text-align: center;
   background-color: #5c5552ff;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  /* box-shadow: 0 0 8px rgba(0,0,0,0.2); */
+  border: 1px solid rgba(0,0,0,0.2);
 }
 
 .cert-logo {
