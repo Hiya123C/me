@@ -34,6 +34,20 @@ body, html {
   padding: 10px;
 }
 
+.mobile-title {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .desktop-title {
+    display: none;
+  }
+  .mobile-title {
+    display: inline;
+  }
+}
+
+
 .typewriter {
   display: inline-block;
   overflow: hidden;
