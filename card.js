@@ -126,3 +126,25 @@ function handleSwipe(deltaX) {
   }
   isDragging = false;
 }
+
+// left/right arrow
+function arrowSwipe(direction) {
+  const card = getTopCard();
+  if (!card) return;
+  
+  card.style.transition = "transform 0.4s ease, opacity 0.4s ease";
+  const deltaX = direction === "right" ? 1000 : -1000;
+  const rotate = direction === "right" ? 45 : -45;
+
+  card.style.transform = `translateX(${deltaX}px) rotate(${rotate}deg)`;
+  card.style.opacity = 0;
+
+  setTimeout(() => {
+    card.remove();
+    if (container.children.length === 0) {
+      document.getElementById("reset-button").style.display = "block";
+      document.querySelector(".centre-grp").style.opacity = 1;
+      document.querySelector(".closing").style.opacity = 1;
+    }
+  }, 400);
+}
