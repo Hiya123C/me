@@ -37,10 +37,28 @@
             <h2 class="title">Achievements</h2>
             <p class="caption">random competitions and milestones</p>
             <!-- show various squares that contain the comp. name, desc, placing + year -->
-            <h2>2022</h2>
-            <h2>2023</h2>
-            <h2>2024</h2>
-            <h2>2025</h2>
+
+            <div class="filters">
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All</option>
+                <option value="music">Music</option>
+                <option value="tech">Tech</option>
+                <option value="science">Science</option>
+                <option value="language">Lang/Humans</option>
+                <option value="leadership">Leadership</option>
+            </select>
+
+            <label for="yearFilter">Year:</label>
+            <select id="yearFilter">
+                <option value="all">All</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+        </div>
+
         </div>
     </div>
 
