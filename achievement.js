@@ -7,11 +7,10 @@ function filterCards() {
     const year = yearFilter.value;
 
     cards.forEach(card => {
-        const cardCategory = card.dataset.category;
-        const cardYear = card.dataset.year;
-
-        const categoryMatch = (category === 'all' || cardCategory === category);
+        const categories = card.dataset.category.split(",");
         const years = card.dataset.year.split(",");
+
+        const categoryMatch = category === "all" || categories.includes(category);
         const yearMatch = year === "all" || years.includes(year);
 
         if (categoryMatch && yearMatch) {
