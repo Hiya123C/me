@@ -6,6 +6,7 @@
     <title>Hiya123_SL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="achievement.css">
     <link rel="stylesheet" href="music-disc.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
@@ -36,34 +37,129 @@
         <div class="horizontal-text-container">
             <h2 class="title">Achievements</h2>
             <p class="caption">random competitions and milestones</p>
+            <s><p class="caption">this is currently hidden cause why wld anyone wanna see a person "brag" /jk</p></s>
             <!-- show various squares that contain the comp. name, desc, placing + year -->
 
             <div class="filters">
-            <label for="categoryFilter">Category:</label>
-            <select id="categoryFilter">
-                <option value="all">All</option>
-                <option value="music">Music</option>
-                <option value="tech">Tech</option>
-                <option value="science">Science</option>
-                <option value="language">Lang/Humans</option>
-                <option value="leadership">Leadership</option>
-            </select>
+                <label for="categoryFilter">Category:</label>
+                <select id="categoryFilter">
+                    <option value="all">All</option>
+                    <option value="music">Music</option>
+                    <option value="tech">Tech</option>
+                    <option value="science">Science</option>
+                    <option value="language">Language</option>
+                    <option value="humanities">Humanities</option>
+                    <option value="leadership">Leadership</option>
+                </select>
 
-            <label for="yearFilter">Year:</label>
-            <select id="yearFilter">
-                <option value="all">All</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-            </select>
-        </div>
+                <label for="yearFilter">Year:</label>
+                <select id="yearFilter">
+                    <option value="all">All</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+
+            <!-- ADD A NICE SHIMMERY HOVER EFFECT FOR THE IMPT COMPS -->
+
+            <!-- achievement squarish cards -->
+            <div class="achievement-square-container">
+                <div class="achievement-square shimmer" data-category="music" data-year="2025">
+                    <h3 class="square-title">新空下 (Xin Kong Xia) Xin Yao Creative Songwriting Competition</h3>
+                    <p class="square-desc">Song "匆匆" featured as part of Xin Kong Xia's 2025 album</p>
+                    <p class="square-placing silver">2nd Place</p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="achievement-square shimmer" data-category="music" data-year="2025">
+                    <h3 class="square-title">SYF Youth Station Project</h3>
+                    <p class="square-desc">Song "Sky" featured on SYF's youtube page</p>
+                    <p class="square-placing gold">Select (Produced)</p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="achievement-square shimmer" data-category="music" data-year="2025">
+                    <h3 class="square-title">Carmee Lim Art Scholarship</h3>
+                    <p class="square-desc">in recognition of my contribution to the performing/visual arts</p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="achievement-square shimmer" data-category="music" data-year="2025">
+                    <h3 class="square-title">Batch Song '28</h3>
+                    <p class="square-desc">wrote my school's 2026 Batch Song: "Dream, Fly, Be" </p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="achievement-square shimmer" data-category="science" data-year="2025">
+                    <h3 class="square-title">SISTEMIC Design and Build Challenge</h3>
+                    <p class="square-placing gold">Gold</p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="achievement-square" data-category="science" data-year="2024">
+                    <h3 class="square-title">Singapore Junior Biology Olympiad</h3>
+                    <p class="square-placing bronze">Bronze</p>
+                    <p class="year">2024</p>
+                </div>
+
+                <div class="achievement-square" data-category="tech" data-year="2024">
+                    <h3 class="square-title">National Cybersecurity Olympiad</h3>
+                    <p class="square-placing">Honourable Mention</p>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="achievement-square" data-category="tech" data-year="2023">
+                    <h3 class="square-title">YCEP CTF (June)</h3>
+                    <p class="square-placing bronze">3rd Place</p>
+                    <p class="year">2023</p>
+                </div>
+
+                <div class="achievement-square" data-category="language" data-year="2025,2022">
+                    <h3 class="square-title">National Text Chinese Recital Competition (Team)</h3>
+                    <p class="square-placing bronze">Bronze (both years)</p>
+                    <p class="year">2025 & 2022</p>
+                </div>
+
+                <div class="achievement-square" data-category="humanities" data-year="2022">
+                    <h3 class="square-title">History National Library Board (Group)</h3>
+                    <p class="square-placing silver">2nd Place</p>
+                    <p class="year">2022</p>
+                </div>
+
+                <div class="achievement-square" data-category="humanities" data-year="2022">
+                    <h3 class="square-title">National Schools Literature Festival (Group)</h3>
+                    <p class="square-placing bronze">Bronze</p>
+                    <p class="year">2023</p>
+                </div>
+
+                <div class="achievement-square" data-category="leadership" data-year="2024">
+                    <h3 class="square-title">Class Exco</h3>
+                    <p class="square-placing">Vice-Chairperson</p>
+                    <p class="year">2024</p>
+                </div>
+
+                <div class="achievement-square" data-category="leadership" data-year="2025">
+                    <h3 class="square-title">AVA Crew</h3>
+                    <p class="year">2025</p>
+                </div>
+
+                <div class="achievement-square" data-category="leadership" data-year="2024,2025">
+                    <h3 class="square-title">CCA Exco</h3>
+                    <p class="square-placing">Welfare</p>
+                    <p class="year">2024-2025</p>
+                </div>
+                
+            </div>
 
         </div>
     </div>
 
-    <!-- music-disc!! -->
+    <!-- music-disc -->
     <div class="disc-wrapper">
+        <audio id="discSound" src="music/Disc-sound.mp3" preload="auto"></audio>
+
         <div class="disc">
             <img class="disc-img black" src="photos/Black-music-disc.png">
         </div>
@@ -77,5 +173,6 @@
     </div>
 
     <script src="music-disc.js"></script>
+    <script src="achievement.js"></script>
 </body>
 </html>
