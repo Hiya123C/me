@@ -109,9 +109,11 @@ body, html {
 /* contact me... */
 #contact-me {
   margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
 }
 
-.github-link {
+.contact-link {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -119,16 +121,16 @@ body, html {
   color: inherit;
 }
 
-.github-link p {
+.contact-link p {
   margin: 0;
 }
 
-.github-link:hover img {
+.contact-link:hover img {
   transform: scale(1.05);
   transition: 0.2s ease;
 }
 
-.github-link:hover p {
+.contact-link:hover p {
   color: #d1daff;
   transition: 0.2s ease;
 }
@@ -145,3 +147,59 @@ body, html {
     font-size: 1.4rem;
   }
 }
+
+
+
+/* MY SPIN CUBE HEADER LOL */
+
+.cube {
+  /* display: inline-block; */
+  display: flex; 
+  position: relative;
+  width: 140px;
+  height: 1.2em;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  animation: cubeSpin 8s infinite ease-in-out;
+
+  transform-origin: center center;
+
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  color: #f7f0f5ff;
+}
+
+.cube .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* cube faces */
+.cube .face:nth-child(1) {
+  transform: rotateX(0deg) translateZ(0.6em);
+}
+.cube .face:nth-child(2) {
+  transform: rotateX(90deg) translateZ(0.6em);
+}
+.cube .face:nth-child(3) {
+  transform: rotateX(180deg) translateZ(0.6em);
+}
+.cube .face:nth-child(4) {
+  transform: rotateX(270deg) translateZ(0.6em);
+}
+
+/* cube rotation */
+@keyframes cubeSpin {
+  0%, 15%   { transform: rotateX(0deg); }
+  25%, 40%  { transform: rotateX(-90deg); }
+  50%, 65%  { transform: rotateX(-180deg); }
+  75%, 90%  { transform: rotateX(-270deg); }
+  100%      { transform: rotateX(-360deg); }
+}
+
