@@ -1,16 +1,17 @@
-.disc-container {
+#disc-container {
     position: relative;
     width: 100vw;
     height: 60vh;
     overflow: hidden;
+
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-end; 
     
     border: 2px solid blue;
 }
 
-.tech-disc-wrapper {
+/* .tech-disc-wrapper {
     position: relative;
     width: 90vw;
     height: 90vh;
@@ -18,30 +19,38 @@
     cursor: pointer;
 
     border: 2px solid lime;
+} */
+
+.tech-disc {
+    position: absolute;
+    bottom: -35vw;
+    width: 80vw;
+    height: auto;
+    transition: transform 1s ease;
+    pointer-events: auto;
+    cursor: pointer;
+    display: block;
+
+    border: 2px solid lime
 }
+
 
 .tech-disc-wrapper:active {
     transform: translateY(-40%) scale(0.98);
 }
 
-.tech-disc {
-    margin-top: 500px;
-    width: 90vw;
-    height: 90vh;
-    width: 100%;
-    height: 100%;
-    transition: transform 1s ease;
-    pointer-events: none;
-}
-
 .project {
     position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX;
+
     width: 200px;
     height: 300px;
+    
     text-align: center;
     opacity: 0;
     pointer-events: none;
-    transform: translate(-50%, -50%);
     z-index: 50;
 
     border: 2px solid red;

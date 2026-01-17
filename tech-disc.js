@@ -1,4 +1,4 @@
-const wrapper = document.getElementById("techDiscWrapper");
+const container = document.getElementById("disc-container");
 const techDisc = document.getElementById('techDisc');
 const projects = document.querySelectorAll('.project');
 
@@ -8,7 +8,7 @@ let isAnimating = false;
 
 projects[currentIndex].classList.add("active");
 
-wrapper.addEventListener("click", () => {
+container.addEventListener("click", () => {
     if (isAnimating) return;
     isAnimating = true;
 
